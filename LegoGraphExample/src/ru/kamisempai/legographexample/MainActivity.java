@@ -3,11 +3,11 @@ package ru.kamisempai.legographexample;
 import ru.kamisempai.adaptgraphexample.R;
 import ru.kamisempai.legograph.adapter.CursorGraphAdapter;
 import ru.kamisempai.legograph.view.LegoGraphView;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.database.MatrixCursor;
 import android.os.Bundle;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
 	private static final Long[] DATES =   {100l, 110l , 120l, 130l, 140l, 150l};
 	private static final Float[] VALUES = {3f, 1f,   2f,  4f,  -2f, 2f};

@@ -2,6 +2,7 @@ package ru.kamisempai.legograph.drawer;
 
 import java.util.Calendar;
 
+import ru.kamisempai.legograph.R;
 import ru.kamisempai.legograph.view.LegoGraphView;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -25,7 +26,7 @@ public class HeaderDrawerMonths implements HeaderDrawer {
         mMonthTextMargin = getDpToPx(displayMetrics, 5);
         mCalendar = Calendar.getInstance();
         
-        mMonths = new String[] {"1 month", "2 month", "3 month", "4 month", "5 month", "6 month", "7 month", "8 month", "9 month", "10 month", "11 month", "12 month"};
+        mMonths = context.getResources().getStringArray(R.array.months);
         
 		mAxisTextPaint = new Paint();
 		mAxisTextPaint.setAntiAlias(true);
