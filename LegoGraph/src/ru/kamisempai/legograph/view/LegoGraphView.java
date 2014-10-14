@@ -180,7 +180,7 @@ public class LegoGraphView extends View {
 		    if (action == MotionEvent.ACTION_CANCEL) {
 		        
 		    }
-		    return super.onTouchEvent(event) || mGestureDetector.onTouchEvent(event) || mScaleGestureDetector.onTouchEvent(event);
+		    return super.onTouchEvent(event) || (mScaleGestureDetector.onTouchEvent(event) | mGestureDetector.onTouchEvent(event));
 		    //return super.onTouchEvent(event) || mGestureDetector.onTouchEvent(event);
 		}
 		return false;
@@ -469,6 +469,7 @@ public class LegoGraphView extends View {
 				if(iterator.hasPrevious()) graphPoint = iterator.previous();
 				else graphPoint = null;
 			}
+			iterator.next();
 			boolean secondPointIsVisible = iterator.next().getX() > mPosition - mVisibleTimeInterval;
 			
 			if(!preLastPointIsVisible) mPointsPool.add(mPointsList.removeLast());
